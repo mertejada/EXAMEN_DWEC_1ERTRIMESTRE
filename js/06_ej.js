@@ -14,27 +14,41 @@ class Trabajador {
         
     }
 
-    get Nombre(){
+    getNombre(){
         return this.nombre;
     }
 
-    get Apellido(){
+    getApellidos(){
         return this.apellidos;
     }
 
-    get Direccion(){
+    getDireccion(){
         return this.direccion;
     }
 
-    get Sueldo(){
+    getSueldo(){
         return this.sueldo;
     }
 
-    set Nombre(nom){
+    getTareas(){
+        return this.tareas;
+    }
+
+    setNombre(nombre){
         this.nombre = nombre;
     }
 
-    
+    setApellidos(apellidos){
+        this.apellidos = apellidos;
+    }
+
+    setDireccion(direccion){
+        this.direccion = direccion;
+    }
+
+    setTareas(tareas){
+        this.tareas = tareas;
+    }
 }
 
 class Informatico extends Trabajador{
@@ -53,14 +67,28 @@ let trabajador = new Trabajador ("Alejandro", "Rodríguez", "Calle Huescar", 200
 let informatico = new Informatico ("Maria", "Ramirez", "Calle Carpa");
 let conserje = new Conserje ("Matías", "Martínez", "Calle Europa");
 
-console.log(trabajador);
-console.log(informatico);
-console.log(conserje);
+
+console.log("Trabajador: \n",trabajador);
+console.log("Informático: \n",informatico);
+console.log("Conserje: \n",conserje);
+console.log("\n ");
 
 
-//Funcionamiento del setter
-console.log(trabajador.Nombre);
+//Funcionamiento del setter en la clase padre e hijas
+console.log("Nombre trabajador: ",trabajador.getNombre());
+console.log("Tareas informático: ",informatico.getTareas());
+console.log("Apellidos conserje: ",conserje.getNombre());
+console.log("\n ");
+
 //Funcionamiento del getter: No entiendo por que no funciona
-console.log(trabajador.Nombre("Mercedes"));
+trabajador.setNombre("Javier");
+informatico.setTareas(["Asistir a cursos","Diseñar BBDD","Solucionar bugs"]);
+conserje.setApellidos("Amezcua Sánchez");
+
+console.log("Nombre trabajador tras usar el setter: ",trabajador.nombre);
+console.log("Tareas informático tras usar el setter: ",informatico.tareas);
+console.log("Apellidos conserje tras usar el setter: ",conserje.apellidos);
+
+
 
 
