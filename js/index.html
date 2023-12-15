@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let max = parseInt(prompt("Introduzca el número máximo aleatorio: "));
+
+let arrNumerosAleatorios = [];
+
+for(let i = 0; i<50 ; i++){
+    arrNumerosAleatorios.push.Math.floor(Math.random()*(max-1)+1);
+}
+let arrPares = arrNumerosAleatorios.filter(numero=> numero%2 == 0);
+let arrImpares = arrNumerosAleatorios.filter(numero=> numero%2 != 0);
+
+console.log(arrNumerosAleatorios);
+console.log(arrPares);
+console.log(arrImpares);
+
+
+    </script>
+</body>
+</html>
